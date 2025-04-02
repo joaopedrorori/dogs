@@ -18,8 +18,9 @@ const LoginForm = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          username,
-          password,
+          username: username.value,
+          password: password.value,
+
         }),
       })
         .then((response) => {
