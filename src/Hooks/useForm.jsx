@@ -11,6 +11,10 @@ const types = {
     message:
       "Password should have at least 4 characters, at least 1 uppercase letter, at least 1 lowercase letter, at least 1 digit, at least 1 special character.",
   },
+  number: {
+    regex: /^\d+$/,
+    message: "Must be a number.",
+  },
 };
 
 const useForm = (type) => {
