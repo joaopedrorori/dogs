@@ -51,10 +51,9 @@
   .img {
     grid-row: 1;
   }
-  .photo {
+  .single.photo {
     height: initial;
     max-height: initial;
-
   }
 }
 
