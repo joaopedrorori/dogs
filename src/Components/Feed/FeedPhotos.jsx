@@ -24,9 +24,6 @@ const FeedPhotos = ({ page, user, setModalPhoto, setInfinite }) => {
   if (data)
     return (
       <ul className={`${styles.feed} animeLeft`}>
-        {data.length === 0 && (
-          <p className="container mainContainer">No posts yet.</p>
-        )}
         {data.map((photo) => (
           <FeedPhotosItem
             photo={photo}
