@@ -2,9 +2,11 @@ import React from "react";
 import styles from "./PhotoDelete.module.css";
 import { PHOTO_DELETE } from "../../api";
 import useFetch from "../../Hooks/useFetch";
+import { useNavigate } from "react-router-dom";
 
 const PhotoDelete = ({ id }) => {
   const { loading, request } = useFetch();
+  const navigate = useNavigate();
 
   async function handleClick() {
     const confrim = window.confirm(
@@ -13,7 +15,10 @@ const PhotoDelete = ({ id }) => {
     if (confirm) {
       const { url, options } = PHOTO_DELETE(id);
       const { response } = await request(url, options);
-      if (response.ok) window.location.reload();
+      if (response.ok) {
+        navigate("/");
+        window.location.reload();
+      }
     }
   }
   return (
