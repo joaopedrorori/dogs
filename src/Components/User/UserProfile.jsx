@@ -7,7 +7,7 @@ const UserProfile = () => {
   const { user } = useParams();
   return (
     <section className="container mainSection">
-      <Head title={user} description={`${user}'s profile`} />
+      <Head title={`${user}'s space`} description={`${user}'s profile`} />
       <h1 className="title">{user}</h1>
       <Feed user={user} />
     </section>

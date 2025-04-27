@@ -36,7 +36,7 @@ const LoginForm = () => {
           <Button>LogIn</Button>
         )}
 
-        {error && <Error error={error + "Invalid user or password"} />}
+        {error && <Error error={error && "Invalid user or password"} />}
       </form>
       <Link className={styles.resetPassword} to="/login/lost">
         I forgot my password
