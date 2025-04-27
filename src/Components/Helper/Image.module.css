@@ -1,6 +1,7 @@
 .wrapper {
   display: grid;
 }
+
 .img {
   display: block;
   max-width: 100%;
@@ -8,6 +9,7 @@
   opacity: 0;
   transition: 0.2s;
 }
+
 .skeleton {
   grid-area: 1/1;
   height: 100%;

@@ -20,7 +20,10 @@ const PhotoCommentsForm = ({ single, id, setComments }) => {
   }
 
   return (
-    <form className={`${styles.form} ${single ? styles.single : ""}`} onSubmit={handleSubmit}>
+    <form
+      className={`${styles.form} ${single ? styles.single : ""}`}
+      onSubmit={handleSubmit}
+    >
       <textarea
         className={styles.textarea}
         id="comment"
@@ -32,7 +35,7 @@ const PhotoCommentsForm = ({ single, id, setComments }) => {
       <button className={styles.btn}>
         <Sent />
       </button>
-      <Error error={error} />
+      <Error error={error && "Fill in with a value before send."} />
     </form>
   );
 };
