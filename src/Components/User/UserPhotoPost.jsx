@@ -7,6 +7,7 @@ import useForm from "../../Hooks/useForm.jsx";
 import useFetch from "../../Hooks/useFetch.jsx";
 import { PHOTO_POST } from "../../api.jsx";
 import { useNavigate } from "react-router-dom";
+import Head from "../Helper/Head.jsx";
 
 const UserPhotoPost = () => {
   const name = useForm();
@@ -30,7 +31,6 @@ const UserPhotoPost = () => {
 
     const token = window.localStorage.getItem("token");
     const { url, options } = PHOTO_POST(formData, token);
-    // console.log(url, options);
     request(url, options);
   }
 
@@ -43,6 +43,7 @@ const UserPhotoPost = () => {
 
   return (
     <section className={`${styles.photoPost} animeLeft`}>
+      <Head title="Post your photo" description="Dogs's feed" />
       <form onSubmit={handleSubmit}>
         <Input label="Name" type="text" name="name" {...name} />
         <Input label="Weight" type="number" name="weight" {...weight} />
